@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        header{
+            background-color: rgb(255, 98, 0);
+            color: white;
+            text-align:center;
+            margin: 0px;
+            padding: 0px;
+            border: 20px solid rgb(255, 98, 0);;
+        }
+        
+        header h2 {
+            margin: 0;
+            padding: 0;
+        }
+        header ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+        }
+
+        
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 8px;
+            
+            
+            
+        }
+        li{
+            border: none;
+            
+        }
+
+
+        ul li a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            
+            }
+
+        ul li a:visited {
+            color: rgb(255, 0, 157);
+            }
+
+        ul li a:hover,
+        ul li a:focus {
+            color: #ac360f;
+            }
+
+
+    .arama{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .arama input{
+    
+      display: block;
+      padding: 10px;
+      margin: none;
+      margin-left: -1px;
+      margin-top: 20px;
+      border-right: none;
+      height: 22px;
+      width: 400px;
+      border-radius: 40px 0 0 40px;
+      border: 1px solid grey
+      
+      
+
+    }
+    .arama button{
+        height: 43px;
+        
+        border-radius: 0 40px 40px 0;
+        border-left: none;
+        display: block;
+        margin-top: 20px;
+        border: 1px solid grey;
+        border-left: none;
+        padding: 0 20px;
+        cursor: pointer;
+        background-color: rgb(255, 98, 0);
+        color: white;
+
+    }
+    .arama button :hover{
+        background-color:#ac360f
+        
+    }
+
+    nav{
+        padding: 60px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(124, 165, 167);
+
+    }
+    nav h1{
+        color: white;
+        
+
+    }
+    nav p{
+        color: white;
+        padding: none;
+        
+        
+
+    }
+    nav button{
+        background-color: rgb(255, 98, 0);
+        border: none;
+        border-radius: 10px;
+        margin-top: 6px;
+        padding: 12px;
+        
+        
+
+    }
+    nav button a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    
+
+    article{
+        padding: 100px;
+        padding-top: 50px;
+        
+    }
+
+    .baslik{
+         grid-column: 1 / -1;    /* 1. sütundan sondaki sütuna kadar yay */
+         margin-bottom: 10px;
+
+        
+    }
+
+    .satir{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        
+        
+    
+    }
+    
+    .yemekler-sutunu{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)
+        
+    }
+    button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #00aaff;
+  transform: scale(1.05);
+}
+.siparis-ver{
+    background-color: rgb(255, 98, 0);
+}
+
+    
+    
+    
+</style>
+</head>
+<body>
+    <header>
+        <h2>Lezzetli Yemekler</h2>
+        <ul>
+            <li><a href="anasayfa">Anasayfa</a></li>
+            <li><a href="menüler">Menüler</a></li>
+            <li><a href="hakkimizda">Hakkımızda</a></li>
+            <li><a href="iletisim">İletişim</a></li>
+        </ul>
+        
+    </header>
+
+    <div class="arama">
+        <input type="text" placeholder="Yemek Ara..." style="text-align:start;">
+        <button class="ara">Ara</button>
+    </div>
+
+    <nav>
+        <h1>Lezzetli Yemeklerin Tek Adresi</h1>
+        <p>Lezzetli Yemekler size bir tık uzakta...</p>
+        <button class="yemekleri-kesfet"><a href="Yemekleri Keşfet">Yemekleri Keşfet</a></button>
+
+    </nav>
+
+    <article>
+        <div class="satir">
+            <h3 class="baslik">Popüler Yemekler</h3>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">İskender</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+            </div>
+            
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Adana Kebap</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px;"> Sipariş Ver</button>
+                
+            </div>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Mantı</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            
+            
+        </div>
+            
+        
+        <div class="satir">
+            <h3 class="baslik">İndirimli Yemekler</h3>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">İçli Köfte</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Karnabahar</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Karnıyarık</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            
+            
+        </div>
+            
+
+        <div class="satir">
+            <h3 class="baslik">Tüm Yemekler</h3>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Kıymalı Patatesli Börek</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">İmam Bayıldı</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            <div class="yemekler-sutunu"
+            style="display: flex; justify-content: center; align-items: start; flex-direction: column;">
+                <img src="" alt="" width="300" height="150" style="padding: 9px; display: flex; align-items: center; justify-content: center; margin: 0 auto;" >
+                <p style="font-weight: bold; margin: 2px; ">Hamsi Tava</p>
+                <p style="text-align: start;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, modi quae. Doloremque, voluptatum.</p>
+                <button class="siparis-ver" style="display: flex;
+                align-items: center; justify-content: center; margin: 0 auto; color: white; padding: 7px; border: none; border-radius: 7px; "> Sipariş Ver</button>
+                
+            </div>
+            
+            
+        </div>
+    </article>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
